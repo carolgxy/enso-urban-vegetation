@@ -125,7 +125,7 @@ anomaly is `100 × (A − A_ref) / A_ref`. Only Q2-qualified GUB–months enter 
 unbalanced panel of 2,972,017 records across 58,882 units within 526 5° blocks.
 
 **Large files.** GitHub rejects files above 100 MB, so the three large tables are archived on Zenodo
-rather than committed here: 
+rather than committed here: https://doi.org/10.5281/zenodo.24188060.
 
 Dataset provenance: Sentinel-2 Level-2A Scene Classification Layer (ESA), ERA5-Land reanalysis
 (Copernicus C3S), Global Urban Boundary polygons, and the Relative Oceanic Niño Index (NOAA CPC). Please
