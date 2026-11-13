@@ -173,4 +173,4 @@ cite the original data providers in addition to the paper.
 
 If you use this code, please cite the paper (full reference to be added upon publication) and this
 repository.
-Questions about the code: open an issue, or contact the corresponding author listed in the paper.
+Questions about the code: please contact the corresponding author listed in the paper.
