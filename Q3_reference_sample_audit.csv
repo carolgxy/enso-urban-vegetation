@@ -1,0 +1,2 @@
+n_original_sample_obs,n_q3_obs,n_q3_gub,n_q3_blocks,n_gub_calendar_month_reference,min_historical_qualified_years,mean_historical_qualified_years,median_2026_original_anomaly,median_2026_Q3_anomaly,same_observation_rows_across_lags
+4271184,2972017,58882,526,407512,5,6.343702762127251,1.6193359749740353,0.44322450542180925,True
