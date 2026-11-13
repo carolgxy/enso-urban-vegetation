@@ -1,0 +1,10 @@
+# Core dependencies for maincode.py and its sibling modules.
+# scipy >= 1.9 provides spearmanr(...).statistic;
+# matplotlib >= 3.7 provides legend(loc='outside lower center').
+numpy>=1.22
+pandas>=1.5
+scipy>=1.9
+matplotlib>=3.7
+
+# Optional: only needed for --boundaries-shp (coastline / country outline under the maps).
+# geopandas>=0.12
