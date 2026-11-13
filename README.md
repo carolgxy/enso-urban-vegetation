@@ -150,26 +150,7 @@ cite the original data providers in addition to the paper.
 
 ---
 
-## 6. What a successful run looks like
-
-```
-Reading the quality flags and common lag0–3 exposure support...
-Complete exposure IDs across 4 lags: ...
-Reconstructing Q3 outcome and sample (same code as regressions)...
-AUDIT PASSED: Q3 n_obs/n_gub/n_blocks exactly match regression.
-Figure1 prepared; valid 2026 GUB-month sample varies by month.
-Reestimating Q3 lag3 regional H0/H1 (same Q3 rows; 5° × year–month clustering)...
-FINISHED. Main figures: Figure1_Q3.png/pdf and Figure2_Q3.png/pdf
-```
-
-If the audit line instead raises `Q3 SAMPLE MISMATCH`, one of the inputs is not the one used for the
-manuscript: usually a pre-filtered quality table, a different `--min-hist`, or `ORIG_FID` read as an
-integer rather than a string. The reader casts `ORIG_FID` to `string` on purpose, because the identifiers
-are not contiguous and leading zeroes would be lost under numeric parsing.
-
----
-
-## 7. Notes and limitations
+## 6. Notes and limitations
 
 - **Maps are centroid maps.** The geography table stores centroids only. Point colour encodes the GUB-level
   anomaly at a fixed marker size (`--map-point-size`), but the original GUB polygons are not reconstructed.
@@ -188,7 +169,7 @@ are not contiguous and leading zeroes would be lost under numeric parsing.
 
 ---
 
-## 8. Citation
+## 7. Citation
 
 If you use this code, please cite the paper (full reference to be added upon publication) and this
 repository.
