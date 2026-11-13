@@ -20,13 +20,7 @@ GUB and year–month fixed effects. Coefficients are reported as associations, n
 | `enso_formal_interaction_models.py` | Shared foundation: panel reader, GUB and year–month fixed effects via alternating within transforms (no dummy matrices), 5° spatial-block CR1 inference, season lookup, geometry lookup. |
 | `enso_hydroclimate_panel_models.py` | H0/H1/H2 model definitions, RONI series handling, exposure attachment and standardization, two-way (5° block × year–month) clustering, Benjamini–Hochberg adjustment, per-subregion fitting. |
 | `scl_Q3_common_sample_lag_robustness.py` | Sentinel-2 quality screens (Q1/Q2), reconstruction of the historical Q3 reference, construction of the common lag 0–3 sample, reference-sensitivity regressions. |
-| `run_analysis.sh` | One-command reproduction with the settings used for the manuscript. |
 | `requirements.txt` | Python dependencies. |
-| `.gitattributes` | Git LFS rules for the large tables. |
-| `.gitignore` | Excludes outputs, virtual environments and caches. |
-| `LICENSE`, `CITATION.cff` | Licence for the code; citation metadata template. |
-
-Input tables (see §4) are expected next to the scripts. No paths are hard-coded.
 
 ---
 
@@ -130,15 +124,8 @@ sample. `--q3-m` is accepted for backward compatibility and is not used by this 
 anomaly is `100 × (A − A_ref) / A_ref`. Only Q2-qualified GUB–months enter the regressions, which yields an
 unbalanced panel of 2,972,017 records across 58,882 units within 526 5° blocks.
 
-**Large files.** GitHub rejects files above 100 MB, so the two tables of 577 MB and 407 MB cannot be
-committed as ordinary Git objects; the 66 MB exposure table is well within the limit but is tracked with LFS
-anyway to keep the history small. Two options:
-
-1. **Git LFS** (rules already in `.gitattributes`): run `git lfs install` once, then commit normally.
-   Note that the free LFS quota (1 GB storage / 1 GB monthly bandwidth) is barely enough for a single clone.
-2. **External archive (recommended)**: deposit the tables on Zenodo or figshare, publish the DOI with the
-   paper, and keep only the small configuration tables in the repository. Point `run_analysis.sh` at your
-   local copies (`bash run_analysis.sh /path/to/data`); nothing else changes.
+**Large files.** GitHub rejects files above 100 MB, so the three large tables are archived on Zenodo
+rather than committed here: 
 
 Dataset provenance: Sentinel-2 Level-2A Scene Classification Layer (ESA), ERA5-Land reanalysis
 (Copernicus C3S), Global Urban Boundary polygons, and the Relative Oceanic Niño Index (NOAA CPC). Please
@@ -201,13 +188,8 @@ are not contiguous and leading zeroes would be lost under numeric parsing.
 
 ---
 
-## 8. Citation and licence
+## 8. Citation
 
 If you use this code, please cite the paper (full reference to be added upon publication) and this
-repository. `CITATION.cff` is provided as a template — complete the author list and DOI before publishing.
-
-Code: MIT (see `LICENSE`). Derived data tables: CC BY 4.0 is recommended; confirm that the upstream
-Sentinel-2, ERA5-Land, GUB and RONI licences permit redistribution before publishing them, otherwise use
-the external-archive route in §4.
-
+repository.
 Questions about the code: open an issue, or contact the corresponding author listed in the paper.
